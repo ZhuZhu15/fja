@@ -2,9 +2,9 @@ var cart = {};
 
 function loadCart() {
 	if (localStorage.getItem('cart')){
-
+		
 		cart = JSON.parse(localStorage.getItem('cart'));
-		showCart();
+		showCart(); 
 		showMiniCart();
 	}
 	else {
@@ -98,7 +98,7 @@ function sendEmail() {
 		if (email.indexOf('@') > -1 && email.indexOf('.') > -1){
 			if (isEmpty(cart)) {
 				$.post(
-					"controllers/cartcontroller.php",
+					"controllers/cartcontroller",
 					{
 						"ename" : ename,
 						"ephone" : ephone,

@@ -36,7 +36,7 @@ $(document).ready(function(){
       $(this).closest('tr').children(".col-color").text(perfomer);
       var update_order2 = $(this).closest('tr').children(".order_number").text();
       $.post(
-        "controllers/cartcontroller.php",
+        "controllers/cartcontroller",
         {
           "perfomer" : perfomer,
           "update_order2" : update_order2,

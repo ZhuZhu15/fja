@@ -28,8 +28,10 @@ $ename = $_POST['ename'];
 $email = $_POST['email'];
 $cart = $_POST['cart'];
 
+
 foreach ($cart as $id=>$count) {
 	$goods_name = $json[$id]['name'];
+	echo $max_order_number . "<br>" . $goods_name . "<br>" . $count . "<br>" . $ename ."<br>" . $email ."<br>" . $ephone ."<br>" . $this->date ."<br>" . $this->time;
 	mysqli_query($connection, "INSERT INTO orders (order_number, Kanken_name, Kanken_count, Kanken_cost, Client_name, Client_mail, Client_phone, date, time)
 		VALUES ('$max_order_number' ,'$goods_name', '$count', '$count'*2300, '$ename', '$email', '$ephone', '$this->date', '$this->time')");
 }
@@ -54,6 +56,7 @@ $model = new dBase();
 
 if (isset($_POST['ephone'])){
 	$model->insertData();
+	echo "dannie priwli " . $_POST['ephone'];
 }
 if (isset($_POST['new_color'])){
 	$model->updateColor();

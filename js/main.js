@@ -4,7 +4,7 @@ var cart = {};
 
 function init() {
   //читаем данные из файла
-  $.getJSON("goods.json", showColor);
+  $.getJSON("goods.json", showColor); //достаем данные из jsona и отправляем в showColor
 }
 
 function showColor(data) {
@@ -12,6 +12,7 @@ function showColor(data) {
   var color="";
   for (var key in data)
   { 
+    //тут создаются кнопки с атрибутами, которые потом уходят в chooseColor
     out += "<button type='button' class='btn-color' onclick='chooseColor(\""+data[key].img+"\","+[key]+", \""+data[key].name+"\")' style='background:"+data[key].color+";color: #FFF;'>"+data[key].name+"</button>";
  }
  $('.colors').html(out);
@@ -22,7 +23,7 @@ function chooseColor (img, id, name) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-     // document.getElementById("demo").src = img;
+     // здесь приходят данные с кнопок
      $('#kanken-pic').attr('src', img);
      $('.but').attr('data-id', id);
      $('.name').text(name);
@@ -35,53 +36,32 @@ function chooseColor (img, id, name) {
 
 
 
-
-/*
-function goodsOut(data) {
-
-  console.log(data);
-  var out="";
-/*  for (var key in data)
-  { 
-    out += '<div class="col-sm-6 text-center"> <div class="card" style="text-align:center; display:inline-block">';
-    out += '<img src="'+data[key].img+'" alt="" class="pic card-img-top" style="max-width:450px;">  <div class="card-body">';
-    out += '<h4 class="name card-title">'+data[key].name+'</h4>';
-    out += '<p class="card-text cost">'+data[key].cost+'</p>';
-    out += '<button class="btn btn-dark but" data-id="'+[key]+'">Добавить в корзину</button> </div> </div> </div>';
-    
-  }
- // $('.goods-out').html(out);
- $('.but').on('click', addToCart);
-}
-*/
-
-
 $(document).ready(function() {
- init();
- loadCart();
- $('.but').on('click', addToCart);
+ init(); //тут инитится джсон
+ loadCart(); //загружается корзина
+ $('.but').on('click', addToCart); //по клику на кнопку срабатываем addTocart
 })
 
 function addToCart() {
-  var id = $(this).attr('data-id');
+  var id = $(this).attr('data-id'); //забирает атрибут data-id у товара
 //console.log(id);
 if (cart[id] == undefined){
-  cart[id] = 1;
+  cart[id] = 1; //если такого товара не было то присваивается единица
 }
 else {
-  cart[id]++;
+  cart[id]++; //был то ++
 }
 //console.log(cart);
-showMiniCart();
-saveCart();
-showMiniCartDiv();
+showMiniCart(); //показывается корзина в хидере
+saveCart(); //сайвится массив 
+showMiniCartDiv(); //показывается фикс. корзина
 }
 
 function saveCart() {
-  localStorage.setItem('cart', JSON.stringify(cart));
+  localStorage.setItem('cart', JSON.stringify(cart)); //в локал стор загоняем массив 
 }
 function loadCart() {
-  if (localStorage.getItem('cart')){
+  if (localStorage.getItem('cart')){ //получаем массив из локал стора, если он есть
     cart = JSON.parse(localStorage.getItem('cart'));
     showMiniCart();
     showMiniCartDiv();

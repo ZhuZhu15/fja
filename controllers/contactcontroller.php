@@ -16,20 +16,23 @@ $this->time = date('H:i:s');
 }
 
 function insertContact() {
+global $connection;
 $phone = $_POST['phone'];
 $name = $_POST['usr'];
 $comment = $_POST['comment'];
 
-mysqli_query($connection, "INSERT INTO contact (Name, Phone, Comment, date, time)
+mysqli_query($connection, "INSERT INTO contact (Name, Phone, Comment, Date, Time)
 	VALUES ('$name', '$phone', '$comment', '$this->date', '$this->time')");
 }
 }
-mysqli_close($connection);
+
 
 $model = new Contact();
-if(isset($_POST['iphone'])) 
+if(isset($_POST['phone'])) 
 {
 $model->insertContact();
+echo "dannie priwli";
 }
+mysqli_close($connection);
 
 ?>
