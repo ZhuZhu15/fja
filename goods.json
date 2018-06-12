@@ -1,0 +1,36 @@
+
+{
+ "1": {
+  "name": "Gray",
+  "cost": "2300 &#8381;",
+  "img" : "img/1.jpg",
+  "color" : "#97948b"
+},
+"26": {
+  "name": "Black",
+  "cost": "2300 &#8381;",
+  "img" : "img/26.jpg",
+  "color" : "#000"
+
+},
+
+"35": {
+  "name": "Forest green",
+  "cost": "2300 &#8381;",
+  "img" : "img/35.jpg",
+  "color" : "#5b7457"
+},
+"27": {
+  "name": "Black/ox Red",
+  "cost": "2300 &#8381;",
+  "img" : "img/27.jpg",
+  "color" : "linear-gradient( to right, black 50%, #54151d 50%);"     
+},
+"4": {
+  "name": "Yellow",
+  "cost": "2300 &#8381;",
+  "img" : "img/4.jpg",
+  "color" : "#cfb11f"     
+}
+
+}

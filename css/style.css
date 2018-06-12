@@ -1,0 +1,235 @@
+html, body {
+        height: 100%;
+    }
+ *{
+    font-family: 'Open Sans', sans-serif; 
+ }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main {
+        position: relative;
+        min-height: 100%;
+        height: auto !important;
+        _height: 100%;
+    }
+
+    .footer-margin {
+        position: static;
+        width: auto;
+        border: 0px dotted maroon;
+        clear: both;
+        margin: 0;
+        padding: 0;
+        height: 1;
+        font-size: 1px;
+        height: 100px;
+    }
+
+    footer {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 6;
+        height: 54px;
+        width: 100%;
+        overflow: hidden;
+        border: 0px dotted green;
+        background: #f8f7f1;
+    }
+#logo {
+	width:120px;
+	height: 40px;
+}
+#demo img{
+    min-height: 220px;
+}
+.thead-inverse  {
+            color: #fff;
+            background-color: #373a3c;
+        }
+#jum {
+	text-align: center;
+	color: white;
+	background: url(../img/scorecard.jpg) 100% 100% no-repeat;
+    background-size: cover;
+    text-shadow:black 1px 1px 0,black -1px -1px 0, 
+    black -1px 1px 0, black 1px -1px 0;
+    
+}            
+
+.das {
+	color: red;
+}
+
+
+
+
+.carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+  
+#dark-butn {
+	margin-top:70px;
+}
+.btn-color {
+    margin-left: 5px;
+    border: 0;
+    margin-top: 5px;
+    height: 30px;
+}
+.chosed-color {
+    color:red;
+}
+.card-color {
+	background: gray;
+}
+.second-col {
+	padding-top: 15%;
+}
+#info-container {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.carousel-caption {
+    text-shadow:black 1px 1px 0,black -1px -1px 0, 
+    black -1px 1px 0, black 1px -1px 0;
+}
+
+.knopka {
+	background-color: #d2232a;
+	max-width: 125px;	
+}
+.but {
+    background-color: #d2232a;
+    font-weight: bold;
+    height: 60px;
+}
+.contacts i {
+    width: 30px;
+}
+
+.item-width {
+	width: 125px;
+}
+.redicon 
+{
+	color:#d2232a;
+}
+
+#iframe {
+	width: 315px;
+	height: 200px;
+}
+
+
+#footer1 {
+	display: inline-block;
+}
+
+#footer2 {
+	display: inline-block;
+	float: right;
+	margin-right: 40px;
+}
+
+.fixed {
+
+width: 70px;
+height: 70px;
+background: #d2232a;
+border-radius: 50%;
+position:fixed;
+bottom: 80px;
+right: 10px;
+border: 1px solid #d2232a;
+animation: pulse 2s infinite, opacity 2s;
+z-index:9999;
+display:none;
+}
+
+.fixed:hover {
+  animation: opacity 2s;
+}
+
+@keyframes opacity {
+	0%{
+        opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(114,0,9, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 70px rgba(114,0,9, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(114,0,9, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(114,0,9, 0.4);
+    box-shadow: 0 0 0 0 rgba(114,0,9, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 70px rgba(114,0,9, 0);
+      box-shadow: 0 0 0 70px rgba(114,0,9, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(114,0,9, 0);
+      box-shadow: 0 0 0 0 rgba(114,0,9, 0);
+  }
+}
+.cart-icon {
+  font-size: 22px;
+  position:absolute;
+  top: 16px;
+  left: 8px;
+}
+.email-field {
+  margin-left: 5px;
+  position: relative;
+}
+
+
+@media screen and (max-width: 480px) {
+
+  #demo {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 420px) {
+          #iframe {
+    	width: 300px;
+    }
+}
+
+@media screen and (max-width: 345px) {
+    #logo {
+        width: 90px;
+        height: 30px;
+    }
+    #iframe {
+    	width: 250px;
+    }
+}
+@media screen and (max-width: 325px) {
+    .phone-number {
+        margin-left: -30px;
+    }
+    .mynumber {
+        margin-left: -20px;
+    }
+}
+
