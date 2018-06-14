@@ -93,7 +93,7 @@ function isEmpty(object) {
 }
 
 
-function sendContact() {
+$(".knopka").on("click", function() {
 
   var name = $('#usr').val();
   var phone = $('#phone').val();
@@ -113,7 +113,7 @@ function sendContact() {
     alert('Мы обязательно свяжемся с вами');
   }
   location.reload();
-}
+});
 
 
 function redirectToCart(){

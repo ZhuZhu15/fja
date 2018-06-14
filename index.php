@@ -141,7 +141,7 @@ include 'header.php' ?>
                 <label for="comment">Комментарии:</label>
                 <textarea class="form-control" name="comment" rows="4" id="comment" maxlength="500"></textarea>
               </div>
-              <button type="submit" class="btn knopka" onclick="sendContact()">Отправить</button>
+              <button type="submit" class="btn knopka">Отправить</button>
             </div>
 
           </div>
