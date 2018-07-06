@@ -102,7 +102,11 @@ html, body {
 
 .knopka {
 	background-color: #d2232a;
-	max-width: 125px;	
+    max-width: 125px;	
+}
+.red-button {
+    background-color: #d2232a;
+    max-width: 125px;
 }
 .but {
     background-color: #d2232a;

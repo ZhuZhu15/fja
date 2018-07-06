@@ -18,6 +18,7 @@
  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">-->
   <script src="js/jquery.maskedinput.min.js"></script>
   <link href="css/style.css" rel="stylesheet">
+
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50" class="bg-light">
   <div class="main">
@@ -46,8 +47,9 @@
           </li>
         </ul>
         <ul class="navbar-nav">
-         <button class="btn knopka" onclick="redirectToCart()"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Корзина(<span id="cart"></span>)</button>
+         <button class="btn red-button" onclick="redirectToCart()"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Корзина(<span id="cart"></span>)</button>
        </ul>
      </div>
    </nav>
+   <script src="js/main.js"></script>
    <!-- панель навигации -->
